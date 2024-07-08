@@ -3,6 +3,7 @@
 Welcome to your first coding exercise! In this guide, you'll learn how to set up your development environment by installing Java, Maven, Python, VS Code, and Git Bash. By the end of this exercise, you'll have all the essential tools needed to start coding.
 
 (Note: This guide assumes you are using a Windows environment.)
+(Note: Ask chat gpt if you have any questions about any of these steps [chatgpt.com](https://chat.openai.com/chat))
 
 ---
 
@@ -42,28 +43,19 @@ Java is a high-level, object-oriented programming language used for building cro
 
 1. **Download Java Development Kit (JDK):**
    - Go to the [Java SE Downloads page](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
-   - Choose the appropriate JDK for your operating system and download it.
-   - ![Add screenshot]
+   - Choose the latest jdk and Windows, then choose either the .exe or .msi installer
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/a2fcae1b-2382-45aa-b843-861ec5fc5b3a)
 
 2. **Install JDK:**
-   - Run the downloaded installer and follow the instructions to install Java.
-   - **Set up the environment variables:**
-     - Open the System Properties (Right-click My Computer/This PC > Properties).
-     - ![Add screenshot]
-     - Click on Advanced system settings > Environment Variables.
-     - ![Add screenshot]
-     - Under System variables, click New and add `JAVA_HOME` with the path to your JDK installation (e.g., `C:\Program Files\Java\jdk-11.0.x`).
-     - ![Add screenshot]
-     - Find the `Path` variable, click Edit, and add `%JAVA_HOME%\bin`.
-     - ![Add screenshot]
+   - Run the downloaded installer and follow the instructions to install Java. (Just accecpt all defaults)
 
 3. **Verify the Installation:**
    - Open a command prompt (Cmd) and type `java -version`. You should see the installed Java version.
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/07bd3cbd-5872-4c73-867f-048587adc639)
 
 **How to Use Java:**
 
-1. Open VS Code.
+1. Open VS Code. (A later step)
 2. Create a new file named `HelloWorld.java`.
 3. Add the following code:
 
@@ -78,9 +70,8 @@ public class HelloWorld {
 4. Save the file and open a terminal in VS Code.
 5. Navigate to the directory containing `HelloWorld.java` using the `cd` command.
 6. Compile the program by typing `javac HelloWorld.java`.
-   - ![Add screenshot]
 7. Run the program by typing `java HelloWorld`. You should see "Hello, World!" printed to the terminal.
-   - ![Add screenshot]
+8. Or compile and run the program in one step, using `java HelloWorld.java`
 
 ---
 
@@ -88,43 +79,44 @@ public class HelloWorld {
 
 **What is Maven?**
 
-Maven is a build automation tool primarily used for Java projects. It manages project dependencies, builds the project, and generates reports and documentation.
+Maven is a build automation tool primarily used for Java projects. It manages project dependencies, builds the project, and generates reports and documentation. (Makes things much less work)
 
 **Installation Steps:**
 
 1. **Download Maven:**
    - Go to the [Maven Downloads page](https://maven.apache.org/download.cgi).
-   - Download the binary zip archive for your operating system.
-   - ![Add screenshot]
+   - Download the binary zip archive.
 
 2. **Install Maven:**
    - Extract the downloaded zip file to a directory (e.g., `C:\Program Files\Maven`).
-   - ![Add screenshot]
-
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/7c21b42f-1363-459c-a492-0bb138c43f57)
+     
 3. **Set Up Environment Variables:**
-   - Open the System Properties (as done in the Java installation step).
+   - Open the System Properties (windows button + env + enter)
    - Click on Advanced system settings > Environment Variables.
-   - ![Add screenshot]
-   - Under System variables, click New and add `MAVEN_HOME` with the path to your Maven installation (e.g., `C:\Program Files\Maven\apache-maven-3.x.x`).
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/f457a0f2-8f8e-4214-9915-6ba331ae3576)
    - Find the `Path` variable, click Edit, and add `%MAVEN_HOME%\bin`.
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/d1444792-403e-43f2-bcb3-6286b538ec31)
 
 4. **Verify the Installation:**
    - Open a command prompt and type `mvn -version`. You should see the installed Maven version.
-   - ![Add screenshot]
-
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/97a8c7b5-5ec2-41e7-8f9a-b2ab9c30f9a5)
+     
 **How to Use Maven:**
 
 1. Go to the [Spring Initializr](https://start.spring.io/).
 2. Fill in the details for your project (e.g., Group, Artifact, Name).
 3. Choose the dependencies you need for your project.
 4. Click "Generate" to download a zip file of your project.
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/7cc8942f-ea5d-4849-a6a8-8d9268c27e0c)
 5. Extract the downloaded zip file to a directory.
-6. Open a terminal in that directory.
-7. Run `mvn clean install` to build the project.
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/fdf55739-3b99-4f8f-8a82-b38ceb6373f2)
+7. Open a terminal in that directory.
+   - Right click a-cool-project
+   - Left click open in terminal
+9. Run `mvn clean install` to build the project.
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/f5758ea8-3224-4272-ba2b-741857d8d367)
+   - If this was a real project with tests then those would have run, we will use mvn wayyyyy later in the demos. (don't worry about it for now)
 
 ---
 
@@ -132,19 +124,21 @@ Maven is a build automation tool primarily used for Java projects. It manages pr
 
 **What is Python?**
 
-Python is a high-level, interpreted programming language known for its readability and versatility. It is widely used for web development, data analysis, artificial intelligence, scientific computing, and more.
+Python is a high-level, interpreted programming language known for its readability and versatility. It is widely used for web development, data analysis, artificial intelligence, scientific computing, and more. (It is a simpler designed language and is what we will do a lot with)
 
 **Installation Steps:**
 
 1. **Download Python:**
    - Go to the [Python Downloads page](https://www.python.org/downloads/).
    - Choose the latest version for your operating system and download it.
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/882a19f3-de01-4342-b64a-f097dd1b054c)
+   - 
+   - If installation successful and asked to disable path limit close for now. (this is like an address limit to how long your street address can be)
 
 2. **Install Python:**
    - Run the downloaded installer and ensure you check the box to add Python to PATH.
    - Follow the installation instructions.
-   - ![Add screenshot]
+   - ![image](https://github.com/Brennan-Cox/Intoduction/assets/95318091/15090f08-96c7-4741-b9d7-28b01f118a7b)
 
 3. **Verify the Installation:**
    - Open a command prompt and type `python --version` or `python3 --version`. You should see the installed Python version.
